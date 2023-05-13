@@ -1,0 +1,34 @@
+dot [[file:draft.org::*Sketch Logic][Sketch Logic:1]]
+digraph G {
+        size = "8,8";
+        graph [splines=ortho, nodesep=0.75];
+        compound=true;
+        edge [arrowhead=vee];
+        request, response [shape=plaintext];
+        server, index [shape=doublecircle];
+        results [shape=circle];
+        local_storage, user_inputs [shape=box];
+        /* back end */
+        subgraph cluster0 {
+                  node [shape=circle];
+                  data -> server [arrowhead=odot, style=dotted];
+                  server -> data [arrowhead=odot, style=dotted];
+                  label="back end";
+        }
+        index -> local_storage [arrowhead=none, style=dotted];
+        data -> results [arrowhead=vee, style=dotted];
+        user_inputs -> index [arrowhead=vee];
+        results -> index [arrowhead=none];
+        /* front end */
+        subgraph cluster1 {
+                  node [shape=circle];
+                  index;
+                  results;
+                  label="front end"
+        }
+        request -> server [lhead=cluster0, arrowhead=dot];
+        server -> index [ltail=cluster0, lhead=cluster1, arrowhead=tee];
+        index -> server [ltail=cluster1, lhead=cluster0, arrowhead=tee];
+        index -> response [ltail=cluster1, arrowhead=dot];
+}
+dot Sketch Logic:1 ends here

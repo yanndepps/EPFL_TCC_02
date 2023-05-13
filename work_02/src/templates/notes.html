@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Notes</title>
+	<!-- font awesome icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+	<!-- google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+	<!-- stylesheet -->
+	<link rel="stylesheet" href="static/notes.css" type="text/css" media="screen" />
+</head>
+
+<body>
+	<div class="container">
+		<!-- scramble txt -->
+		<div class="scramble-main">
+			<div id="notes-title">Notes</div>
+		</div>
+		<!-- tasks -->
+		<div id="new-task">
+			<!-- note input -->
+			<input type="text" placeholder="enter a new note ...">
+			<button id="push">ADD</button>
+			<!-- log out -->
+			<a id="log-out-link" href="{{url_for('logout')}}">Click here to log out &#x2930;</a><br>
+		</div>
+		<!-- added tasks -->
+		<div id="tasks"></div>
+	</div>
+	<!-- scripts -->
+	<script src="static/main.js"></script>
+	<script src="static/notes.js"></script>
+</body>
+
+</html>

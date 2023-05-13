@@ -1,0 +1,173 @@
+*,
+*:before,
+*:after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--main-light-color: #86B653;
+	--main-dark-color: #344E43;
+	--main-bg-color: #202020;
+	--main-fg-color: #ffffff;
+	--icon-del-color: #ACD777;
+	--input-bg-color: #4d4d4d;
+}
+
+body {
+	height: 100vh;
+	background: linear-gradient(
+		135deg,
+		var(--main-light-color),
+		var(--main-dark-color));
+}
+
+/* main */
+.container {
+	background-color: var(--main-bg-color);
+	width: 400px;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 25%;
+	left: 50%;
+	margin: auto;
+	border-radius: 8px;
+	box-shadow: 0 20px 25px rgba(0, 0, 0, 0.35);
+	padding: 0 50px;
+}
+
+div * {
+	border: none;
+	outline: none;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+}
+
+/* tasks */
+#new-task {
+	position: relative;
+	background-color: var(--main-bg-color);
+	padding: 1.8em 1.25em;
+	display: grid;
+	grid-template-columns: 9fr 3fr;
+	gap: 1em;
+}
+
+#new-task input {
+	height: 45px;
+	font-family: "Space Grotesk", sans-serif;
+	font-size: 1em;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	border-radius: 5px;
+	padding: 0.8em 0.5em;
+	color: #ffffff;
+	background-color: var(--input-bg-color);
+}
+
+#new-task button {
+	font-family: "Space Grotesk", sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	width: 45px;
+	padding: 0.8em 0.5em;
+	background-color: var(--main-dark-color);
+	color: var(--main-fg-color);
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#tasks {
+	background-color: var(--main-bg-color);
+	color: var(--main-fg-color);
+	position: absolute;
+	left: 0px;
+	padding: 1.8em 1.25em;
+	margin-top: 1.8em;
+	width: 100%;
+	box-shadow: 0 20px 25px rgba(0, 0, 0, 0.35);
+	border-radius: 8px;
+}
+
+.task {
+	background-color: var(--main-bg-color);
+	padding: 0.3em 0.6em;
+	margin-top: 0.6em;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid var(--main-dark-color);
+	cursor: pointer;
+}
+
+.task span {
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+	letter-spacing: 0.5px;
+}
+
+.task button {
+	color: var(--main-bg-color);
+	padding: 0.3em 0;
+	width: 2.0em;
+	border-radius: 0.3em;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.delete {
+	background-color: var(--icon-del-color);
+}
+
+.edit {
+	background-color: var(--main-dark-color);
+	margin-left: auto;
+	margin-right: 1em;
+}
+
+.completed {
+	text-decoration: line-through;
+}
+
+/* log out */
+#log-out-link {
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	color: var(--main-fg-color);
+	background-color: transparent;
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+	padding-top: 15px;
+}
+
+/* txt scramble */
+.scramble-main {
+	height: 100%;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+#notes-title {
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+	letter-spacing: 0.5px;
+	color: var(--main-fg-color);
+	padding-top: 15px;
+}
+
+.dud {
+	color: var(--main-dark-color);
+}

@@ -1,0 +1,21 @@
+node_modules/
+notes/
+.log/
+tmp/
+temp/
+frames/
+*.org
+.projectile
+
+# ---
+
+venv/
+*.pyc
+__pycache__/
+instance/
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/

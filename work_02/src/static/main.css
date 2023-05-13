@@ -1,0 +1,254 @@
+*,
+*:before,
+*:after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--main-light-color: #86B653;
+	--main-dark-color: #344E43;
+	--main-bg-color: #202020;
+	--main-fg-color: #ffffff;
+	--error-fg-color: #ff5b84;
+	--input-bg-color: #4d4d4d;
+	--label-fg-color: #e5e5e5;
+}
+
+body {
+	height: 100vh;
+	background: linear-gradient(
+		135deg,
+		var(--main-light-color),
+		var(--main-dark-color));
+}
+
+/* main card forms */
+#main-form {
+	background-color: var(--main-bg-color);
+	height: 450px;
+	width: 400px;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	border-radius: 8px;
+	box-shadow: 0 20px 25px rgba(0,0,0,0.35);
+	padding: 0 50px;
+}
+
+form * {
+	border: none;
+	outline: none;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+}
+
+/* home page */
+#hom-btn-log {
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	height: 45px;
+	letter-spacing: 0.5px;
+	width: 300px;
+	position: absolute;
+	bottom: 275px;
+	padding: 15px 0;
+	background-color: var(--main-dark-color);
+	color: var(--main-fg-color);
+	border-radius: 5px;
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+#hom-btn-reg {
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	height: 45px;
+	letter-spacing: 0.5px;
+	width: 300px;
+	position: absolute;
+	bottom: 165px;
+	padding: 15px 0;
+	background-color: var(--main-dark-color);
+	color: var(--main-fg-color);
+	border-radius: 5px;
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+/* register page */
+#reg-link {
+	position: absolute;
+	bottom: 25px;
+	right: 70px;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	color: var(--main-fg-color);
+	background-color: transparent;
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.error-main {
+	height: 100%;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+#errors {
+	position: absolute;
+	bottom: 148px;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	color: var(--error-fg-color);
+}
+
+#btn-sub {
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	height: 45px;
+	letter-spacing: 0.5px;
+	width: 300px;
+	position: absolute;
+	bottom: 75px;
+	padding: 15px 0;
+	background-color:var(--main-dark-color);
+	color: var(--main-fg-color);
+	border-radius: 5px;
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+input {
+	display: block;
+	height: 2px;
+	width: 300px;
+	position: absolute;
+	/* background-color: var(--input-bg-color); */
+	background-color: var(--input-bg-color);
+	color: var(--main-fg-color);
+	padding: 0 15px;
+	font-weight: 300;
+	border-radius: 5px;
+	transition: 0.5s all;
+}
+
+label {
+	display: inline-block;
+	color: var(--label-fg-color);
+	cursor: pointer;
+	font-size: 12px;
+	position: absolute;
+	transition: 0.5s all;
+}
+
+#username {
+	bottom: 305px;
+}
+
+label[for = "username"] {
+	bottom: 310px;
+}
+
+#password {
+	bottom: 195px;
+}
+
+label[for = "password"] {
+	bottom: 200px;
+}
+
+::placeholder {
+	color: transparent;
+}
+
+.my-style::placeholder {
+	color: #a5a5a5;
+}
+
+/* login page */
+#log-link {
+	position: absolute;
+	bottom: 25px;
+	right: 70px;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	color: var(--main-fg-color);
+	background-color: transparent;
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+}
+
+/* scramble txt */
+.scramble-main {
+	height: 100%;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+#home-title {
+	position: absolute;
+	bottom: 388px;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+	letter-spacing: 0.5px;
+	color: var(--main-fg-color);
+}
+
+#log-title {
+	position: absolute;
+	bottom: 388px;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+	letter-spacing: 0.5px;
+	color: var(--main-fg-color);
+}
+
+#reg-title {
+	position: absolute;
+	bottom: 388px;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+	letter-spacing: 0.5px;
+	color: #ffffff;
+}
+
+.dud {
+  color: var(--main-dark-color);
+}
